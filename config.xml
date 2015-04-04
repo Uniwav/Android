@@ -4,18 +4,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.uniwav.weatherapp"
-        version   = "1.0.0">
+        version   = "1.0.1">
 
     <name>Uniwav</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Live Weather System.
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+  <author email="mikescops@pixelswap.fr" href="http://uniwav.eu/">
+      Samuel Forestier - Corentin Mors
     </author>
-
     <!--
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
@@ -24,12 +23,12 @@
     <preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
-    <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
-    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
     <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
     <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
-    <preference name="stay-in-webview"            value="false" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
+    <preference name="stay-in-webview"            value="true" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
     <preference name="ios-statusbarstyle"         value="black-opaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
     <preference name="detect-data-types"          value="true" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
     <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
@@ -59,7 +58,7 @@
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
-    <icon src="resources/android/icon/drawable-ldpi-icon.png" gap:platform="android" gap:qualifier="ldpi"/>
+   <!-- <icon src="resources/android/icon/drawable-ldpi-icon.png" gap:platform="android" gap:qualifier="ldpi"/>
     <icon src="resources/android/icon/drawable-mdpi-icon.png" gap:platform="android" gap:qualifier="mdpi"/>
     <icon src="resources/android/icon/drawable-hdpi-icon.png" gap:platform="android" gap:qualifier="hdpi"/>
     <icon src="resources/android/icon/drawable-xhdpi-icon.png" gap:platform="android" gap:qualifier="xhdpi"/>
@@ -73,10 +72,10 @@
     <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
     <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
-    <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
+    <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" /> -->
 
     <!-- Define app splash screen for each platform. -->
-    <gap:splash src="resources/android/splash/drawable-port-ldpi-screen.png" gap:platform="android" gap:qualifier="port-ldpi"/>
+ <!--   <gap:splash src="resources/android/splash/drawable-port-ldpi-screen.png" gap:platform="android" gap:qualifier="port-ldpi"/>
     <gap:splash src="resources/android/splash/drawable-port-mdpi-screen.png" gap:platform="android" gap:qualifier="port-mdpi"/>
     <gap:splash src="resources/android/splash/drawable-port-hdpi-screen.png" gap:platform="android" gap:qualifier="port-hdpi"/>
     <gap:splash src="resources/android/splash/drawable-port-xhdpi-screen.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
@@ -89,7 +88,7 @@
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
-
+--><gap:splash src="splash.png" />
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
     </gap:config-file>
