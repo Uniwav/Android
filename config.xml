@@ -50,7 +50,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
 
 <preference name="AutoHideSplashScreen" value="false"/>
-<preference name="SplashScreenDelay" value="10000" />
+<preference name="SplashScreenDelay" value="2000" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
