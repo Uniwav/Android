@@ -61,7 +61,7 @@
             <h3>Temperature</h3>
             <div>
                <i class="icon ion-thermometer" style="font-size: 1500%;"></i>
-               <h5>15°C</h5>
+               <h5 id="temperature">°C</h5>
               </div>
               </div>
           </ion-slide>
@@ -70,7 +70,7 @@
             <h3>Humidity</h3>
             <div>
                <i class="icon ion-waterdrop" style="font-size: 1500%;"></i>
-               <h5>50%</h5>
+               <h5 id="humidity"></h5>
               </div>
               </div>
           </ion-slide>
@@ -79,7 +79,7 @@
             <h3>Luminosity</h3>
             <div>
                <i class="icon ion-lightbulb" style="font-size: 1500%;"></i>
-               <h5>10% of full lightness</h5>
+               <h5 id="luminosity"> of full lightness</h5>
               </div>
               </div>
           </ion-slide>
@@ -88,7 +88,7 @@
             <h3>Pression</h3>
             <div>
                <i class="icon ion-ios-analytics" style="font-size: 1500%;"></i>
-               <h5>1035 Pa</h5>
+               <h5 id="pression"> Pa</h5>
               </div>
               </div>
           </ion-slide>
@@ -108,4 +108,69 @@ Live Weather is working with diferent components such as Arduino, Raspberry and 
     </script>
     
   </body>
+
+
+<script type="text/javascript">
+function loadCSV(file) {
+    var request;
+    if (window.XMLHttpRequest) {
+        // IE7+, Firefox, Chrome, Opera, Safari
+        request = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        request = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+    // load
+    request.open('GET', file, false);
+    request.send();
+    parseCSV(request.responseText);
+}
+
+function parseCSV(data){
+//replace UNIX new lines
+data = data.replace (/\r\n/g, "\n");
+//replace MAC new lines
+data = data.replace (/\r/g, "\n");
+//split into rows
+var rows = data.split("\n");
+
+// loop through all rows
+for (var i = 0; i < rows.length; i++) {
+    // this line helps to skip empty rows
+    if (rows[i]) {
+        // our columns are separated by comma
+        var column = rows[i].split(" ");
+
+        // column is array now 
+        // first item is date
+        var date = column[0];
+        // second item is time
+        var time = column[1];
+
+        var temperature = column[2];
+        var humidity = column[3];
+        var pression = column[4];
+        var luminosity = column[5];
+
+    }
+}
+
+
+var temp = document.getElementById('temperature');
+temp.innerHTML = temp.innerHTML + temperature;
+
+var hum = document.getElementById('humidity');
+hum.innerHTML = hum.innerHTML + humidity;
+
+var lum = document.getElementById('luminosity');
+lum.innerHTML = lum.innerHTML + luminosity;
+
+var press = document.getElementById('pression');
+press.innerHTML = press.innerHTML + pression;
+}
+
+loadCSV("http://uniwav.eu/data/data.txt");
+
+</script>
+
 </html>
