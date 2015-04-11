@@ -23,9 +23,9 @@
     <script src="js/controllers.js"></script>
   </head>
 
-  <body ng-app="ionicApp" onload="javascript:setTimeout('location.reload(true)',5000)">
+  <body ng-app="ionicApp">
 
-    <ion-nav-bar class="bar-positive">
+    <ion-nav-bar class="bar-positive" align-title="center">
         <ion-nav-back-button>
         </ion-nav-back-button>
     </ion-nav-bar>
@@ -37,8 +37,8 @@
       <ion-view view-title="UNIWAV">
         <ion-nav-buttons side="left">
           <button class="button button-positive button-clear no-animation"
-                  ng-click="startApp()" ng-show="!slideIndex">
-            About
+                  onclick="javascript:location.reload(true)" ng-click="reload();" ng-show="!slideIndex">
+            <i class="icon ion-ios-loop"></i>
           </button>
           <button class="button button-positive button-clear no-animation"
                   ng-click="previous()" ng-show="slideIndex > 0">
