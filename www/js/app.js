@@ -31,6 +31,19 @@ angular.module('ionicApp', ['ionic'])
     $ionicSlideBoxDelegate.previous();
   };
 
+
+  var temp = document.getElementById('temperature');
+  $scope.temperature = temp.innerHTML;
+
+  var hum = document.getElementById('humidity');
+  $scope.humidity = hum.innerHTML;
+
+  var lum = document.getElementById('luminosity');
+  $scope.luminosity = lum.innerHTML;
+
+  var press = document.getElementById('pression');
+  $scope.pression = press.innerHTML;
+
   // Called each time the slide changes
   $scope.slideChanged = function(index) {
     $scope.slideIndex = index;
@@ -45,7 +58,9 @@ angular.module('ionicApp', ['ionic'])
   }
 });
 
+
 var myApp = angular.module('myapp', ['ionic'])
+
     .run(function($ionicPlatform, $ionicPopup) {
         $ionicPlatform.ready(function() {
             if(window.Connection) {
@@ -63,5 +78,8 @@ var myApp = angular.module('myapp', ['ionic'])
             }
         });
     });
+
+
+
 
 
