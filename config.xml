@@ -51,7 +51,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
 
 <preference name="AutoHideSplashScreen" value="false"/>
-<preference name="SplashScreenDelay" value="6000" />
+<preference name="SplashScreenDelay" value="5000" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
@@ -65,8 +65,6 @@
             android:largeScreens="true" 
             android:smallScreens="true" />
         <application android:theme="@android:style/Theme.NoTitleBar" >
-            <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-            </activity>
         </application>
     </gap:config-file>
 
