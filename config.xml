@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.uniwav.weatherapp"
-        version   = "1.0.1">
+        version   = "1.1.2">
 
     <name>Uniwav</name>
 
@@ -50,13 +50,17 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
 
 <preference name="AutoHideSplashScreen" value="false"/>
-<preference name="SplashScreenDelay" value="2000" />
+<preference name="SplashScreenDelay" value="6000" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!--
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
+
+    <gap:config-file platform="android" parent="/manifest">
+    <application android:theme="@android:style/Theme.NoTitleBar"></application>
+    </gap:config-file>
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
