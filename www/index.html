@@ -95,7 +95,7 @@
         </ion-slide-box>
         
         <div class="bar bar-footer bar-dark">
-          <h5 class="title" id="now" >Latest : {{now}}</h5>
+          <h5 class="title" >Latest : {{now}}</h5>
         </div>
         
         
@@ -110,7 +110,7 @@
 Live Weather is working with diferent components such as Arduino, Raspberry and a Debian Web Server. Data go from sensors to web display.</p>
           <br>
           <div class="list card">
-          <a href="http://uniwav.eu/" target="_blank" class="item item-icon-left">
+          <a href="#" onclick="window.open('http://uniwav.eu/', '_system', 'location=yes'); return false;" target="_blank" class="item item-icon-left">
             <i class="icon ion-android-globe"></i>
             Our website Uniwav.eu
           </a>
@@ -195,7 +195,7 @@ for (var i = 0; i < rows.length; i++) {
 }
 
 var datetime = document.getElementById('now');
-datetime.innerHTML = datetime.innerHTML + now;
+datetime.innerHTML = now;
 
 var temp = document.getElementById('temperature');
 temp.innerHTML = temp.innerHTML + temperature;
