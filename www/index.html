@@ -93,6 +93,12 @@
               </div>
           </ion-slide>
         </ion-slide-box>
+        
+        <div class="bar bar-footer bar-balanced">
+          <div class="title" id="now" >Latest : {{now}}</div>
+        </div>
+        
+        
       </ion-view>
     </script>
 
@@ -110,7 +116,9 @@ Live Weather is working with diferent components such as Arduino, Raspberry and 
     <h5 style="display:none;" ng-model="temp" id="temperature"></h5>
     <h5 style="display:none;" ng-model="hum" id="humidity"></h5>
     <h5 style="display:none;" ng-model="press" id="pression"></h5>
-    <h5  style="display:none;" ng-model="lum" id="luminosity"></h5>
+    <h5 style="display:none;" ng-model="lum" id="luminosity"></h5>
+    <div style="display:none;" ng-model="now" id="now" class="title"></div>
+    
     
   </body>
 
@@ -153,6 +161,7 @@ for (var i = 0; i < rows.length; i++) {
         var date = column[0];
         // second item is time
         var time = column[1];
+        var now = date + " " + time;
 
         var temperature = column[2];
         var humidity = column[3];
@@ -162,6 +171,8 @@ for (var i = 0; i < rows.length; i++) {
     }
 }
 
+var datetime = document.getElementById('now');
+datetime.innerHTML = datetime.innerHTML + now;
 
 var temp = document.getElementById('temperature');
 temp.innerHTML = temp.innerHTML + temperature;
