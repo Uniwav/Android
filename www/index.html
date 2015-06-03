@@ -95,7 +95,7 @@
         </ion-slide-box>
         
         <div class="bar bar-footer bar-dark">
-          <div class="title" id="now" >Latest : {{now}}</div>
+          <h5 class="title" id="now" >Latest : {{now}}</h5>
         </div>
         
         
@@ -184,7 +184,7 @@ for (var i = 0; i < rows.length; i++) {
         var date = column[0];
         // second item is time
         var time = column[1];
-        var now = date + " " + time;
+        var now = column[0] + " " + column[1];
 
         var temperature = column[2];
         var humidity = column[3];
