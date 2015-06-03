@@ -42,17 +42,17 @@
           </button>
           <button class="button button-positive button-clear no-animation"
                   ng-click="previous()" ng-show="slideIndex > 0">
-            Previous
+               <i class="icon ion-ios-arrow-left"></i> 
           </button>
         </ion-nav-buttons>
         <ion-nav-buttons side="right"> 
           <button class="button button-positive button-clear no-animation"
                   ng-click="next()" ng-show="slideIndex != 3">
-            Next
+            <i class="icon ion-ios-arrow-right"></i> 
           </button>
           <button class="button button-positive button-clear no-animation"
                   ng-click="startApp()" ng-show="slideIndex == 3">
-            About
+            <i class="icon ion-ios-information-outline"></i> 
           </button>
         </ion-nav-buttons>
         <ion-slide-box on-slide-changed="slideChanged(index)">
@@ -104,8 +104,14 @@
 
     <script id="templates/main.html" type="text/ng-template">
       <ion-view hide-back-button="true" view-title="About">
+      <ion-nav-buttons side="left">
+          <button class="button button-positive button-clear no-animation" ng-click="toIntro()">
+            <i class="icon ion-ios-arrow-left"></i> Back
+          </button>
+      </ion-nav-buttons>
+      
         <ion-content class="padding">
-          <h1>Live Weather App</h1>
+          <h1 style="text-align: center;" >Live Weather App</h1>
           <p>How this project is working ?
 Live Weather is working with diferent components such as Arduino, Raspberry and a Debian Web Server. Data go from sensors to web display.</p>
           <br>
