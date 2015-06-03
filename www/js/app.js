@@ -30,7 +30,10 @@ angular.module('ionicApp', ['ionic'])
   $scope.previous = function() {
     $ionicSlideBoxDelegate.previous();
   };
-
+  
+  
+  var datetime = document.getElementById('now');
+  $scope.now = datetime.innerHTML;
 
   var temp = document.getElementById('temperature');
   $scope.temperature = temp.innerHTML;
